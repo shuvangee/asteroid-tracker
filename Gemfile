@@ -33,4 +33,9 @@ group :test do
   gem "webmock"
   gem "webdrivers"
   gem "i18n"
+  gem "http"
+end
+
+group :production do
+  gem "pg"
 end

@@ -1,18 +1,39 @@
-# sinatra-template
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NeoWs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-Use this repository to create new Sinatra apps. 
+    <style>
+      
+      body {
+          background-color: black;
+          color: white; 
+          font-family: Baskerville; 
+      }
 
-Optionally, to use `ActiveRecord` for database operations, add to the `app.rb`:
+  
+      h1 {
+          color: orange;
+      }
 
-```ruby
-require "sinatra/activerecord"
-```
+      h2 {
+          color: magenta;
+      }
+   
+      p {
+          color: white;
+      }
 
-And in the `config/environment.rb` file add this code block:
-
-```ruby
-configure do
-  # setup a database connection
-  set(:database, { adapter: "sqlite3", database: "db/development.sqlite3" })
-end
-```
+    
+      a {
+          color: lightblue; 
+      }
+    </style>
+  </head>
+  
+  <body>
+    <%= yield %>
+  </body>
+</html>
