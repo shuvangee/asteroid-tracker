@@ -12,6 +12,7 @@ end
 
 
 get("/asteroids/results") do
+  require "http"
   @start= params.fetch("start_date")
   @end= params.fetch("end_date")
   @url= "https://api.nasa.gov/neo/rest/v1/feed?start_date=#{@start}&end_date=#{@end}&api_key=#{ENV.fetch("NASA_API_KEY")}"
