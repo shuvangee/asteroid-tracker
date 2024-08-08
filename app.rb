@@ -25,3 +25,8 @@ get("/asteroids/results") do
   
   erb(:asteroids_results)
 end
+
+
+get("/test-env") do
+  "NASA_API_KEY: #{ENV.fetch("NASA_API_KEY", "Not Found")}"
+end
