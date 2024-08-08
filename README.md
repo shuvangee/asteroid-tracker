@@ -1,39 +1,22 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>NeoWs</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+Near Earth Asteroid Tracker
 
-    <style>
-      
-      body {
-          background-color: black;
-          color: white; 
-          font-family: Baskerville; 
-      }
+NeoWs (Near Earth Object Web Service) - web service for near earth Asteroid information.
+With NeoWs a user can:
+Search for Asteroids based on their closest approach date to Earth
+Browse the overall data-set
 
-  
-      h1 {
-          color: orange;
-      }
+There are 3 pages in this website:
 
-      h2 {
-          color: magenta;
-      }
-   
-      p {
-          color: white;
-      }
+1. The "/" page provides introduction to NeoWs
+2. The "/enter-dates" page asks the user for a date between which they want to find the asteroids 
+3. The "/asteroids/results" page shows the user the list of asteroids around earth and whetehr or not they are potentially dangerous 
 
-    
-      a {
-          color: lightblue; 
-      }
-    </style>
-  </head>
-  
-  <body>
-    <%= yield %>
-  </body>
-</html>
+
+The github files:
+
+1. app.rb contains the get methods 
+2. views folder contains the .erb files 
+3. layout.erb contains elements applied to all pages eg. black backgroud, white text, font etc
+4. homepage.erb contains the html for the "/" page
+5. dates.erb contains the html for the "/enter-dates" page
+6. asteroids_results.erb contains the html for the "/asteroids/results" page
